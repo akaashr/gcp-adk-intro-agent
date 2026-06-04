@@ -12,6 +12,13 @@ resource_scanner_agent = Agent(
     You are a Cloud Resource Scanner. 
     Return *all* resources.
     """,
+
+    tools=[
+        tools.get_compute_instances_list,
+        tools.get_compute_instance_stats,
+        tools.get_current_date,
+        tools.add_days_to_date,
+      ],
 )
 
 # The root_agent is the entry point for the user query.
